@@ -1,0 +1,136 @@
+}
+
+#prev-month::before {
+    transform: rotate(225deg); 
+}
+
+#next-month::before {
+    transform: rotate(45deg); 
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.calendar-container {
+    text-align: center;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #ddd;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.day {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.day-header {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.event {
+    background-color: #ffeb3b;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: left;
+    position: relative;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.holiday-cell {
+    background-color: #ffcccc;
+}
+
+.holiday {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.today {
+    position: relative;
+    background-color: #fff; 
+}
+
+.today::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg">
+    <title>カレンダー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <h1 id="calendar-title">カレンダー</h1>
+        <div class="calendar-nav">
+            <button id="prev-month" aria-label="前の月">←</button>
+            <select id="year-select"></select>
+            <select id="month-select"></select>
+            <button id="next-month" aria-label="次の月">→</button>
+        </div>
+        <div id="calendar"></div>
+    </div>
+    <div id="event-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>予定を追加</h2>
+            <form id="event-form">
+                <label for="event-date">日付:</label>
+                <input type="text" id="event-date" readonly>
+                <label for="event-details">予定:</label>
+                <textarea id="event-details" placeholder="予定を入力"></textarea>
+                <div class="modal-buttons">
+                    <button type="button" id="save-event">保存</button>
+                    <button type="button" id="close-modal">キャンセル</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer><center><p><small>2025 konoMi-Tokyo</small></p></center></footer>
+    <script src="script.js"></script>
+</body>
+</html>

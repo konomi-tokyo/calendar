@@ -44,8 +44,7 @@ const holidays = {
 };
 
 function initYearMonthSelectors() {
-    // 年の選択肢を作成（2020年～2030年）
-    for (let year = 2025; year <= 2030; year++) {
+    for (let year = 2025; year <= 2035; year++) {
         const option = document.createElement("option");
         option.value = year;
         option.textContent = `${year}年`;

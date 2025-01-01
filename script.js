@@ -78,7 +78,7 @@ function generateCalendar(year, month) {
     calendar.innerHTML = "";
 
     const monthNames = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
-    calendarTitle.textContent = `${year}年${monthNames[month]}のカレンダー`;
+    calendarTitle.textContent = `${year}年${monthNames[month]}`;
 
     daysInWeek.forEach(day => {
         const dayHeader = document.createElement("div");
